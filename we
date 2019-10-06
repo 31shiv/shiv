@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int fun(void)
+{
+    int n,k,i,x,y;
+    cin>>n>>k;
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<k;i++)
+    {
+        x=i%n;
+        y=n-x-1;
+        a[x]=a[x]^a[y];
+    }
+    for(i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+int main(void)
+{
+    int i,t;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {
+        fun();
+    }
+}
